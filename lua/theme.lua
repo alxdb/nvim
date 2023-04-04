@@ -20,22 +20,13 @@ onedark.load()
 lualine.setup {
   options = {
     theme = 'onedark',
-    section_separators = { left = '', right = '' },
-    component_separators = { left = '', right = '' },
+    globalstatus = true,
   },
   sections = {
     lualine_a = { 'mode' },
     lualine_b = { 'branch', 'diff', 'diagnostics' },
-    lualine_c = { 'filename' },
+    lualine_c = { { 'filename', path = 4 } },
     lualine_x = { 'fileformat', 'filetype' },
-    lualine_y = { 'progress' },
-    lualine_z = { 'location' },
-  },
-  inactive_sections = {
-    lualine_a = {},
-    lualine_b = {},
-    lualine_c = { 'filename' },
-    lualine_x = { 'filetype' },
     lualine_y = { 'progress' },
     lualine_z = { 'location' },
   },
