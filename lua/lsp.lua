@@ -60,3 +60,7 @@ lspconfig.ocamllsp.setup {
   on_attach = on_attach,
   capabilities = capabilities,
 }
+lspconfig.glslls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
