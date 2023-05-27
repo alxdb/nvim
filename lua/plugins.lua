@@ -8,7 +8,7 @@ vim.cmd([[
 
 require('packer').startup(function(use)
   -- Themes
-  use 'navarasu/onedark.nvim'
+  use 'Shatur/neovim-ayu'
   use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
   -- Language Server
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }

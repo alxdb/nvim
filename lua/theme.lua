@@ -1,25 +1,16 @@
-local onedark = require('onedark')
+local ayu = require('ayu')
 local lualine = require('lualine')
 
 vim.o.termguicolors = true
 
-onedark.setup {
-  style = 'darker',
-  transparent = true,
-  code_style = {
-    comments = 'italic',
-    keywords = 'italic',
-    strings = 'none',
-    functions = 'bold',
-    variables = 'bold',
-  },
-  colors = { fg = '#bcc4d1' }
+ayu.setup {
+  mirage = false,
 }
-onedark.load()
+ayu.colorscheme()
 
 lualine.setup {
   options = {
-    theme = 'onedark',
+    theme = 'ayu',
     globalstatus = true,
   },
   sections = {
