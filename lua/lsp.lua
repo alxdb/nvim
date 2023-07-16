@@ -29,6 +29,15 @@ end
 
 require('lsp-format').setup {}
 
+local null_ls = require('null-ls')
+null_ls.setup {
+  sources = {
+    null_ls.builtins.formatting.black,
+    null_ls.builtins.formatting.isort,
+  },
+  on_attach = on_attach,
+}
+
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 local lspconfig = require('lspconfig')
 lspconfig.lua_ls.setup {
@@ -51,6 +60,13 @@ lspconfig.lua_ls.setup {
 lspconfig.rust_analyzer.setup {
   on_attach = on_attach,
   capabilities = capabilities,
+  settings = {
+    ["rust-analyzer"] = {
+      procMacro = {
+        enable = true
+      }
+    }
+  }
 }
 lspconfig.clangd.setup {
   on_attach = on_attach,
@@ -61,6 +77,22 @@ lspconfig.ocamllsp.setup {
   capabilities = capabilities,
 }
 lspconfig.glslls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+lspconfig.cmake.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+lspconfig.zls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+lspconfig.wgsl_analyzer.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+lspconfig.pyright.setup {
   on_attach = on_attach,
   capabilities = capabilities,
 }
