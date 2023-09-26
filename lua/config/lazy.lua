@@ -14,6 +14,7 @@ require("lazy").setup({
     { "LazyVim/LazyVim", import = "lazyvim.plugins", opts = { colorscheme = "ayu" } },
     -- import any extras modules here
     { import = "lazyvim.plugins.extras.dap.core" },
+    { import = "lazyvim.plugins.extras.test.core" },
     { import = "lazyvim.plugins.extras.lang.rust" },
     -- import/override with your plugins
     { import = "plugins" },
