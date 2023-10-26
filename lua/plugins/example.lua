@@ -92,7 +92,11 @@ return {
       ---@type lspconfig.options
       servers = {
         -- pyright will be automatically installed with mason and loaded with lspconfig
-        pyright = {},
+        pyright = {
+          settings = {
+            python = {},
+          },
+        },
       },
     },
   },
